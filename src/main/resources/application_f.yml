@@ -1,0 +1,19 @@
+server:
+  port: 5050
+  servlet:
+    context-path: /api
+datasource:
+  url: jdbc:postgresql://127.0.0.1:5432/events
+  username: user
+  password: pwd
+  driverClassName: org.postgresql.Driver
+  defaultSchema:
+  maxPoolSize: 10
+  hibernate:
+    hbm2ddl.method: validate
+    show_sql: false
+    format_sql: true
+    dialect: org.hibernate.dialect.PostgreSQL9Dialect
+app:
+  jwtSecret: JWTKey
+  jwtExpirationInMs: 604800000
